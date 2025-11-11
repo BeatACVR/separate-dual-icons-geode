@@ -10,7 +10,9 @@ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 project(SeparateDualIcons VERSION 3.1.0)
 
-file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
+file(GLOB SOURCES
+	src/*.cpp
+)
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
