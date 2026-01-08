@@ -1,3 +1,5 @@
+## v1.4.0
+- Add iOS support (from Beat's fork)
 ## v1.3.1
 - Fixed a crash with Better Unlock Info
 ## v1.3.0
