@@ -77,12 +77,12 @@ class $modify(PlayerObject) {
         
         if (PlayLayer::get()) {
             if (this == PlayLayer::get()->m_player2) {
-                if (m_fields->m_is2PMini && this->m_gamevar0060) PlayerObject::updatePlayerFrame(0);
+                if (m_fields->m_is2PMini && this->m_defaultMiniIcon) PlayerObject::updatePlayerFrame(0);
                 else PlayerObject::updatePlayerFrame(GDI_GET_VALUE(int64_t, "cube", 1));
             }
         } else if (LevelEditorLayer::get()) {
             if (this == LevelEditorLayer::get()->m_player2) {
-                if (m_fields->m_is2PMini && this->m_gamevar0060) PlayerObject::updatePlayerFrame(0);
+                if (m_fields->m_is2PMini && this->m_defaultMiniIcon) PlayerObject::updatePlayerFrame(0);
                 else PlayerObject::updatePlayerFrame(GDI_GET_VALUE(int64_t, "cube", 1));
             }
         }
@@ -108,12 +108,12 @@ class $modify(PlayerObject) {
         
         if (PlayLayer::get()) {
             if (this == PlayLayer::get()->m_player2) {
-                if (m_fields->m_is2PMini && this->m_gamevar0060) PlayerObject::updatePlayerRollFrame(0);
+                if (m_fields->m_is2PMini && this->m_defaultMiniIcon) PlayerObject::updatePlayerRollFrame(0);
                 else PlayerObject::updatePlayerRollFrame(GDI_GET_VALUE(int64_t, "roll", 1));
             }
         } else if (LevelEditorLayer::get()) {
             if (this == LevelEditorLayer::get()->m_player2) {
-                if (m_fields->m_is2PMini && this->m_gamevar0060) PlayerObject::updatePlayerRollFrame(0);
+                if (m_fields->m_is2PMini && this->m_defaultMiniIcon) PlayerObject::updatePlayerRollFrame(0);
                 else PlayerObject::updatePlayerRollFrame(GDI_GET_VALUE(int64_t, "roll", 1));
             }
         }
@@ -187,7 +187,7 @@ class $modify(PlayerObject) {
         
         if (p0) {
             if (PlayLayer::get()) {
-                if (this == PlayLayer::get()->m_player2 && this->m_gamevar0060) {
+                if (this == PlayLayer::get()->m_player2 && this->m_defaultMiniIcon) {
                     if (this->m_isBall)
                         PlayerObject::updatePlayerRollFrame(0);
                     else if (this->m_isDart)
@@ -198,7 +198,7 @@ class $modify(PlayerObject) {
                         PlayerObject::updatePlayerFrame(0);
                 }
             } else if (LevelEditorLayer::get()) {
-                if (this == LevelEditorLayer::get()->m_player2 && this->m_gamevar0060) {
+                if (this == LevelEditorLayer::get()->m_player2 && this->m_defaultMiniIcon) {
                     if (this->m_isBall)
                         PlayerObject::updatePlayerRollFrame(0);
                     else if (this->m_isDart)
@@ -211,7 +211,7 @@ class $modify(PlayerObject) {
             }
         } else {
             if (PlayLayer::get()) {
-                if (this == PlayLayer::get()->m_player2 && this->m_gamevar0060) {
+                if (this == PlayLayer::get()->m_player2 && this->m_defaultMiniIcon) {
                     if (this->m_isBall)
                         PlayerObject::updatePlayerRollFrame(GDI_GET_VALUE(int64_t, "roll", 1));
                     else if (this->m_isDart)
@@ -222,7 +222,7 @@ class $modify(PlayerObject) {
                         PlayerObject::updatePlayerFrame(GDI_GET_VALUE(int64_t, "cube", 1));
                 }
             } else if (LevelEditorLayer::get()) {
-                if (this == LevelEditorLayer::get()->m_player2 && this->m_gamevar0060) {
+                if (this == LevelEditorLayer::get()->m_player2 && this->m_defaultMiniIcon) {
                     if (this->m_isBall)
                         PlayerObject::updatePlayerRollFrame(GDI_GET_VALUE(int64_t, "roll", 1));
                     else if (this->m_isDart)
