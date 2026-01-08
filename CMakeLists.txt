@@ -12,6 +12,8 @@ project(SEPARATE_DUAL_ICONS VERSION 1.0.0)
 
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
 
+target_include_directories(${PROJECT_NAME} PUBLIC include)
+
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
 if (NOT DEFINED ENV{GEODE_SDK})
